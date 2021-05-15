@@ -15,7 +15,7 @@ module sync_tb;
     $dumpfile(`STRINGIFY(`DUMPFILE_PATH));
     $dumpvars(1, sync_tb);
 
-    // 5k state changes == 2500 full cycles
+    // 3500 state changes == 1750 full cycles
     for (i = 0; i < 3500; i = i + 1) begin
       #20 clk = ~clk;
     end

@@ -22,8 +22,8 @@ constraints.pcf: # Download the constraints file for Go Board
 	curl https://www.nandland.com/goboard/Go_Board_Constraints.pcf > $@
 
 .PHONY: install
-install: # Send bitstream to the Go Board
-	$(docker_run) --device /dev/ttyUSB1 --privileged --user 0 $(docker_img) iceprog src/$(MODULE).bin
+install: src/$(MODULE).bin # Send bitstream to the Go Board
+	$(docker_run) --device /dev/ttyUSB1 --privileged --user 0 $(docker_img) iceprog $<
 
 .PHONY: clean
 clean:

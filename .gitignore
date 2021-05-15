@@ -1,0 +1,7 @@
+.hdl_checker/
+src/*.vcd
+src/*.vvp
+src/*.bin
+src/*.asc
+src/*.json
+constraints.pcf

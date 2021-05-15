@@ -12,7 +12,7 @@ Makefile is made for the [Go Board](https://www.nandland.com)
 
 ## Prerequisites
 
-Makefile uses Docker images for compilation, simulation and programming.
+Makefile uses Docker for compilation, simulation and programming.
 
 ## Installation
 

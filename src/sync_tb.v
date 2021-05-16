@@ -7,16 +7,16 @@ module sync_tb;
   integer i;
 
   reg  clk = 0;
-  wire out;
+  wire hsync;
+  wire vsync;
 
-  sync uut(clk, out);
+  sync uut(clk, hsync, vsync);
 
   initial begin
     $dumpfile(`STRINGIFY(`DUMPFILE_PATH));
     $dumpvars(1, sync_tb);
 
-    // 3500 state changes == 1750 full cycles
-    for (i = 0; i < 3500; i = i + 1) begin
+    for (i = 0; i < 850000; i = i + 1) begin
       #20 clk = ~clk;
     end
   end

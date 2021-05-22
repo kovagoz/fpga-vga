@@ -8,7 +8,7 @@ Makefile is made for the [Go Board](https://www.nandland.com)
 
 - [x] Horizontal sync signal
 - [x] Vertical sync signal
-- [+] Video data generator
+- [x] Video data generator
 
 ## Prerequisites
 

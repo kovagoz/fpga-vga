@@ -7,10 +7,19 @@ module sync_tb;
   integer i;
 
   reg  clk = 0;
-  wire hsync;
-  wire vsync;
+  reg  color = 0;
+  wire hsync, vsync;
+  wire [2:0] red, green, blue;
 
-  sync uut(clk, hsync, vsync);
+  sync uut(
+    .i_clock(clk),
+    .i_color(),
+    .o_hsync(hsync),
+    .o_vsync(vsync),
+    .o_red(red),
+    .o_green(green),
+    .o_blue(blue)
+  );
 
   initial begin
     $dumpfile(`STRINGIFY(`DUMPFILE_PATH));
